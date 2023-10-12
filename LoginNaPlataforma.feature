@@ -1,11 +1,13 @@
-Feature: Login na plataforma
-    Como cliente da EBAC-SHOP, quero fazer o login (autenticação) na plataforma para visualizar meus pedidos
+            #language: pt
 
-    Scenario Outline: Múltiplos cenários
-        Given que eu acesse a página de login da EBAC-SHOP
-        When  eu digitar o <user>
-        And a <password>
-        Then Deve exibir a <mensagem>
+            Funcionalidade: Login na plataforma
+            Como cliente da EBAC-SHOP, quero fazer o login (autenticação) na plataforma para visualizar meus pedidos
+
+            Cenário: Múltiplos cenários
+            Dado que eu acesse a página de login da EBAC-SHOP
+            Quando  eu digitar o <user>
+            E a <password>
+            Então Deve exibir a <mensagem>
 
             | user                | password  | message                      |
             | "ebac@ebac.com.br"  | "123@abc" | "Checkout"                   |

@@ -1,17 +1,13 @@
-Feature: Tela de cadastro - Checkout
-    Como cliente da EBAC-SHOP, quero concluir meu cadastro para finalizar minha compra
+            #language: pt
 
-    Scenario Outline: Múltiplos cenários
-        Given que eu acesse a página de checkout da EBAC-SHOP
-        When  eu digitar o <name>
-        And add <lastName>
-        And add <country>
-        And add <adress>
-        And add <city>
-        And add <CEP>
-        And add <phone>
-        And add <email>
-        Then Deve exibir a <message>
+            Funcionalidade: Tela de cadastro - Checkout
+            Como cliente da EBAC-SHOP, quero concluir meu cadastro para finalizar minha compra
+
+            Esquema do Cenário: Múltiplos cenários
+            Dado que eu acesse a página de checkout da EBAC-SHOP
+            Quando  eu digitar o <name>
+            E algum campo obrigatório não está preencido
+            Então Deve exibir a <message>
 
             | email              | name   | lastName  | country  | adress        | city             | CEP         | phone          | message                                                |
             | "ebac@ebac.com.br" | "José" | "Ernesto" | "Brasil" | "Av. Joseiro" | "Belo Horizonte" | "06780-001" | "11 999994444" | "compra realizada com sucesso"                         |
